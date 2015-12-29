@@ -22,5 +22,7 @@
     "gulp-sass": "^2.1.1",
     "gulp-sourcemaps": "^1.6.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "node-php-server": "^0.1.2"
+  }
 }

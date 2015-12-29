@@ -112,7 +112,11 @@
       </main>
     </div>
     <script async src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="./public/script.js" charset="utf-8"></script>
+    <?php
+      $jsonurl = "https://www.strava.com/api/v3/athlete/activities?per_page=1&access_token=93ddad10f5a77e2c0ca100d073012cd4d117c46";
+      $json = file_get_contents($jsonurl);
+      var_dump(json_decode($json));
+    ?>
   </body>
 </html>

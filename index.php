@@ -32,36 +32,6 @@
         </nav>
       </div>
       <main class="mdl-layout__content">
-        <!-- <div class="mdl-grid">
-          <div class="mdl-layout-spacer"></div>
-          <div class="mdl-cell--8-col-desktop mdl-cell--12-col-phone">
-            <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
-              <thead>
-                <tr>
-                  <th class="mdl-data-table__cell--non-numeric">Qualification</th>
-                  <th class="mdl-data-table__cell--non-numeric">Institution</th>
-                  <th class="mdl-data-table__cell--non-numeric">Classification</th>
-                  <th class="mdl-data-table__cell--non-numeric">Graduation</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="mdl-data-table__cell--non-numeric">MSc. Networks and Distributed Systems</td>
-                  <td class="mdl-data-table__cell--non-numeric">Trinity College Dublin</td>
-                  <td class="mdl-data-table__cell--non-numeric">TBD</td>
-                  <td class="mdl-data-table__cell--non-numeric">August 2016</td>
-                </tr>
-                <tr>
-                  <td class="mdl-data-table__cell--non-numeric">BSc. Business Computing</td>
-                  <td class="mdl-data-table__cell--non-numeric">Dublin Institute of Technology</td>
-                  <td class="mdl-data-table__cell--non-numeric">1:1</td>
-                  <td class="mdl-data-table__cell--non-numeric">May 2015</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="mdl-layout-spacer"></div>
-      </div> -->
       <div class="mdl-grid ">
         <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-shadow--2dp">
           <div class="mdl-card__title">
@@ -108,16 +78,25 @@
             <i class="material-icons">code</i>
           </div>
         </div>
-        <h4>Standby... I'm going to create my own personal blog below.</h4>
+        <!-- <h4>Standby... I'm going to create my own personal blog below.</h4> -->
+        <div class="mdl-grid ">
+          <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Heart rate from the past month</h2>
+            </div>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
       </main>
     </div>
     <script async src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
-    <?php
-      $jsonurl = "https://www.strava.com/api/v3/athlete/activities?&access_token=f93ddad10f5a77e2c0ca100d073012cd4d117c46";
-      $json = file_get_contents($jsonurl);
-    ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
       <script>
-      var test = <?php echo $json?>;
+        <?php
+        $jsonurl = "https://www.strava.com/api/v3/athlete/activities?&access_token=f93ddad10f5a77e2c0ca100d073012cd4d117c46";
+        $json = file_get_contents($jsonurl);
+        ?>
+        var stravaData = <?php echo $json?>;
       </script>
       <script src="./public/script.js" charset="utf-8"></script>
   </body>

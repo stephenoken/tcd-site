@@ -8,9 +8,15 @@
   top: 5px;
   padding-right: 5px;
 }
-.mdl-card:nth-child(odd){
+.mdl-card:nth-child(even){
   background: #2196F3;
   .mdl-card__title-text,.mdl-card__supporting-text,.mdl-card__menu{
     color: #fff;
   }
+}
+
+canvas{
+  width: 600px;
+  height: 400px;
+  padding: 0px 50px 0px 50px;
 }

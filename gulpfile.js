@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
-
+var exec = require('child_process').exec;
 gulp.task("styles",function () {
   return gulp.src("./src/styles/**/*.scss")
     .pipe(sass({outputStyle: 'compressed'}))
@@ -17,7 +17,16 @@ gulp.task("script",function () {
     .pipe(gulp.dest("./public"));
 });
 
-gulp.task("default",["styles","script"],function () {
+gulp.task("compile-php",function () {
+    exec("php index.php > temp.html",function (err,stdout,stderr) {
+      if (err != null) {
+        console.log("Error: " + error);
+      }
+    });
+});
+
+gulp.task("default",["styles","script","compile-php"],function () {
   gulp.watch("./src/styles/**/*.scss",["styles"]);
   gulp.watch("./src/javascript/**/*.js",["script"]);
+  gulp.watch("./index.php",["compile-php"]);
 });

@@ -12,6 +12,12 @@ gulp.task("styles",function () {
     .pipe(gulp.dest("./public/"))
 });
 
-gulp.task("default",["styles"],function () {
+gulp.task("script",function () {
+    return gulp.src("./src/javascript/**/*.js")
+    .pipe(gulp.dest("./public"));
+});
+
+gulp.task("default",["styles","script"],function () {
   gulp.watch("./src/styles/**/*.scss",["styles"]);
+  gulp.watch("./src/javascript/**/*.js",["script"]);
 });

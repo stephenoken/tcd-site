@@ -12,8 +12,8 @@ var phpServer = require('node-php-server');
 phpServer.createServer({
     port: 8000,
     hostname: '127.0.0.1',
-    base: '.',
-    keepalive: false,
-    open: false,
+    // base: '.',
+    // keepalive: false,
+    // open: false,
     router: __dirname + '/index.php'
 });

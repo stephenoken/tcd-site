@@ -1,0 +1,11 @@
+{
+  "name": "personal-site",
+  "description": "run `sass --watch ./:./` or just run `node support.js`",
+  "main": "gulpfile.js",
+  "authors": [
+    "Stephen O'Kennedy <stephenoken@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/stephenoken/tcd-site",
+  "moduleType": []
+}

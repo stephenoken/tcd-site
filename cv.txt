@@ -1,0 +1,46 @@
+<!-- <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Work Experience</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <h6>Intern software developer, Terranua, Dublin, Ireland</h6>
+    <p>
+      March 2014 - August 2014
+    </p>
+    <p>
+      Joined as an intern in the company, working on developing and implementing a new style and functionality on the firm’s main application. Worked with several other developers, including an external web designer on developing solutions to implement the new styles while minimising any underlying code changes.
+    </p>
+    <p>
+      August 2014 - August 2015
+    </p>
+    <p>
+      Offered a part-time position upon completion of the internship to continue working on the new styles as well as adding additional functionality to the application. During this time I began experimenting with taskrunners like Grunt and Gulp to imporve both my productivity and the quality of my work.
+    </p>
+  </div>
+  <div class="mdl-card__menu">
+    <i class="material-icons">work</i>
+  </div>
+</div>
+<div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Skills</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    <h6>Problem Solving</h6>
+    <p>
+      Ability to read through and analyse a project or assignment brief together with teasing out the appropriate entities and relationships. This results in being able to give well thought out solutions based on a clear understanding of the requirements.
+    </p>
+    <h6>Dealing with Pressure</h6>
+    <p>
+      Ability to identify and focus on the components that are critical for the successful delivery of a project within a specified time.
+    </p>
+    <h6>Continuous Improvement</h6>
+    <p>
+      Open to expanding my programming skill set, by learning and understanding new technologies. The ability to adapt technologies/programs and use them on different platforms or formats. For example I am currently learning Haskell with the aim of getting a better understanding of functional programming.
+    </p>
+  </div>
+  <div class="mdl-card__menu">
+    <i class="material-icons">code</i>
+  </div>
+</div> -->
+<!-- <h4>Standby... I'm going to create my own personal blog below.</h4> -->

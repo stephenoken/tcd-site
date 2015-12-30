@@ -79,16 +79,23 @@
           </div>
         </div>
         <!-- <h4>Standby... I'm going to create my own personal blog below.</h4> -->
-        <div class="mdl-card mdl-cell mdl-cell--12-col container mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell container mdl-shadow--2dp">
             <div class="mdl-card__title">
               <h2 class="mdl-card__title-text">Heart rate from the past month</h2>
             </div>
-            <canvas id="myChart"></canvas>
+            <canvas id="heart_rate_chart"></canvas>
+        </div>
+        <div class="mdl-card mdl-cell container mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">Speed from the past month</h2>
+            </div>
+            <canvas id="speed_chart"></canvas>
         </div>
       </main>
     </div>
     <script async src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js" charset="utf-8"></script>
       <script>
         <?php
         $jsonurl = "https://www.strava.com/api/v3/athlete/activities?&access_token=f93ddad10f5a77e2c0ca100d073012cd4d117c46";

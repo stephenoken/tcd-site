@@ -33,7 +33,7 @@
       </div>
       <main class="mdl-layout__content">
       <div class="mdl-grid ">
-        <!-- <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-shadow--2dp">
+        <!-- <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-shadow--2dp">
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Work Experience</h2>
           </div>
@@ -56,7 +56,7 @@
             <i class="material-icons">work</i>
           </div>
         </div>
-        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-shadow--2dp">
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Skills</h2>
           </div>
@@ -79,7 +79,7 @@
           </div>
         </div> -->
         <!-- <h4>Standby... I'm going to create my own personal blog below.</h4> -->
-        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-shadow--2dp">
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Distance & Times</h2>
           </div>
@@ -108,7 +108,7 @@
             <i class="material-icons">directions_run</i>
           </div>
         </div>
-        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-shadow--2dp">
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Goals for the year</h2>
           </div>
@@ -131,7 +131,7 @@
               <i class="material-icons">favorite</i>
             </div>
         </div>
-        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--12-col-phone mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-shadow--2dp">
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Exercise Types</h2>
           </div>
@@ -143,7 +143,7 @@
             <i class="material-icons">accessibility</i>
           </div>
         </div>
-        <div class="mdl-card mdl-cell mdl-cell--8-col mdl-cell--12-col-phone mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-shadow--2dp">
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Upcoming Races</h2>
           </div>

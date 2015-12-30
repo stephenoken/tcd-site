@@ -23,7 +23,7 @@ var data = {
       pointStrokeColor: "#fff",
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(220,220,220,1)",
-      data:maxHeartRates
+      data:maxHeartRates.reverse()
     },
     {
       label: 'Average Heart Rate',
@@ -33,10 +33,10 @@ var data = {
       pointStrokeColor: "#fff",
       pointHighlightFill: "#fff",
       pointHighlightStroke: "rgba(220,220,220,1)",
-      data:averageHeartRates
+      data:averageHeartRates.reverse()
     }
   ]
 };
 
 var ctx = document.getElementById("myChart").getContext("2d");
-var myNewChart = new Chart(ctx).Line(data,{responsive: true});
+var myNewChart = new Chart(ctx).Line(data,{responsive: true,maintainAspectRatio: false});

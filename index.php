@@ -79,13 +79,11 @@
           </div>
         </div>
         <!-- <h4>Standby... I'm going to create my own personal blog below.</h4> -->
-        <div class="mdl-grid ">
-          <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell mdl-cell--12-col container mdl-shadow--2dp">
             <div class="mdl-card__title">
               <h2 class="mdl-card__title-text">Heart rate from the past month</h2>
             </div>
             <canvas id="myChart"></canvas>
-          </div>
         </div>
       </main>
     </div>

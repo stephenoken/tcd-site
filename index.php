@@ -19,7 +19,7 @@
           </div>
           <div class="mdl-layout-spacer"></div>
           <nav class="mdl-navigation mdl-layout--large-screen-only">
-            <a href="tel:012826156" class="mdl-navigation__link"><i class="material-icons material-text">phone</i>0851410017</a>
+            <a href="tel:0851410017" class="mdl-navigation__link"><i class="material-icons material-text">phone</i>0851410017</a>
             <a href="mailto:okenneds@tcd.ie" class="mdl-navigation__link"><i class="material-icons material-text">mail</i>okenneds@tcd.ie</a>
           </nav>
         </div>

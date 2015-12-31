@@ -130,7 +130,7 @@ var speedData = {
 
 var speedCtx = document.getElementById("speed_chart").getContext("2d");
 var speedChart = new Chart(speedCtx).Line(speedData,{responsive: true,maintainAspectRatio: false});
-legend(document.getElementById('speed_chart_placeholder'), getData(exerciseTypes));
+legend(document.getElementById('speed_chart_placeholder'), speedData);
 
 var exerciseCTX = document.getElementById("exercise_chart").getContext('2d');
 var exercisePieChart = new Chart(exerciseCTX).Doughnut(getData(exerciseTypes));

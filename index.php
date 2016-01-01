@@ -15,7 +15,7 @@
         <div class="mdl-layout__header-row">
           <span id="main-title" class="mdl-layout-title">Stephen O'Kennedy</span>
           <div class="mdl-tooltip" for="main-title">
-          Just FYI. I'm treating this site as my own slice of the internet. You'll, in time, find my CV, training diary and the odd blog post.
+          You will, in time, find my CV, training logs and the odd blog post.
           </div>
           <div class="mdl-layout-spacer"></div>
           <nav class="mdl-navigation mdl-layout--large-screen-only">
@@ -53,7 +53,7 @@
                   Average Cadence
                 </th>
                 <th class="mdl-data-table__cell--non-numeric">
-                  Average HR
+                  Average HR (BPM)
                 </th>
               </tr>
             </table>
@@ -77,7 +77,7 @@
         </div>
         <div class="mdl-card mdl-cell  mdl-cell--12-col container mdl-shadow--2dp">
             <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text">Heart Rate</h2>
+              <h2 class="mdl-card__title-text">Heart Rate (BPM)</h2>
             </div>
             <canvas id="heart_rate_chart"></canvas>
             <div id="heart_rate_chart_placeholder"></div>
@@ -87,7 +87,7 @@
         </div>
         <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-shadow--2dp">
           <div class="mdl-card__title">
-            <h2 class="mdl-card__title-text">Exercise Types</h2>
+            <h2 class="mdl-card__title-text">Activities Done</h2>
           </div>
           <div class="mdl-card__supporting-text">
             <canvas id="exercise_chart"></canvas>
@@ -112,7 +112,10 @@
         </div>
         <div class="mdl-card mdl-cell  mdl-cell--12-col container mdl-shadow--2dp">
             <div class="mdl-card__title">
-              <h2 class="mdl-card__title-text">Speed</h2>
+              <h2 id="speed" class="mdl-card__title-text">Speed (Km/h)</h2>
+            </div>
+            <div class="mdl-tooltip" for="speed">
+              I'm fairly sure this isn't right.
             </div>
             <canvas id="speed_chart"></canvas>
             <div id="speed_chart_placeholder"></div>

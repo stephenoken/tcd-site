@@ -33,42 +33,53 @@
       </div>
       <main class="mdl-layout__content">
       <div class="mdl-grid ">
-        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell mdl-cell--8-col mdl-cell--12-col-tablet mdl-shadow--2dp">
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Distance & Times</h2>
           </div>
           <div class="mdl-card__supporting-text">
-            <table id="running_table" class="mdl-data-table mdl-js-data-table">
-              <tr>
-                <th class="mdl-data-table__cell--non-numeric">
-                  Distance (km)
-                </th>
-                <th class="mdl-data-table__cell--non-numeric">
-                  Time
-                </th>
-                <th class="mdl-data-table__cell--non-numeric">
-                  Date
-                </th>
-                <th class="mdl-data-table__cell--non-numeric">
-                  Average Cadence
-                </th>
-                <th class="mdl-data-table__cell--non-numeric">
-                  Average HR (BPM)
-                </th>
-              </tr>
-            </table>
+            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+              <div class="mdl-tabs__tab-bar">
+                <a href="#this-week-panel" class="mdl-tabs__tab is-active">This Week</a>
+                <a href="#last-week-panel" class="mdl-tabs__tab">Last Week</a>
+                <a href="#three-week-panel" class="mdl-tabs__tab">3 Weeks</a>
+                <a href="#four-week-panel" class="mdl-tabs__tab">4 Weeks</a>
+              </div>
+              <div class="mdl-tabs__panel is-active" id="this-week-panel">
+                <table id="running-table" class="running-table mdl-data-table mdl-js-data-table">
+                </table>
+              </div>
+              <div class="mdl-tabs__panel is-active" id="last-week-panel">
+                <table class="running-table mdl-data-table mdl-js-data-table">
+                </table>
+              </div>
+              <div class="mdl-tabs__panel is-active" id="three-week-panel">
+                <table class="running-table mdl-data-table mdl-js-data-table">
+                </table>
+              </div>
+              <div class="mdl-tabs__panel is-active" id="four-week-panel">
+                <table class="running-table mdl-data-table mdl-js-data-table">
+                </table>
+              </div>
+          </div>
           </div>
           <div class="mdl-card__menu">
             <i class="material-icons">directions_run</i>
           </div>
         </div>
-        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--12-col-tablet mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell mdl-cell--4-col mdl-cell--12-col-tablet mdl-shadow--2dp">
           <div class="mdl-card__title">
             <h2 class="mdl-card__title-text">Goals for the year</h2>
           </div>
           <div class="mdl-card__supporting-text">
             <p>
               <i class="material-icons">crop_square</i> I'll think of something
+            </p>
+            <p>
+              <i class="material-icons">crop_square</i> Beat Mael in a competition
+            </p>
+            <p>
+              <i class="material-icons">crop_square</i> Learn French
             </p>
           </div>
           <div class="mdl-card__menu">

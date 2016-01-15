@@ -3,7 +3,7 @@ console.log(stravaData);
 
 var runDates = [];
 
-var averageHeartRates = [];
+// var averageHeartRates = [];
 var maxHeartRates = [];
 
 var averageSpeeds = [];
@@ -37,11 +37,19 @@ var exerciseTypes = {
 }
 
 var runData = [];
+const averageHeartRates = stravaData.filter(function (data) {
+  return data.average_heartrate  != undefined
+}).map(function (data) {
+  return data.average_heartrate
+}).reverse();
+//We should really clean up this codebase. The above function should do everything
+//the below function is doing. It would much cleaner and we would ensure that the
+//data is always constant
 stravaData.forEach(function (data) {
   if(data.average_heartrate  != undefined){
     runDates.push(moment(data.start_date).format('Do MMM YY'));
 
-    averageHeartRates.push(data.average_heartrate);
+    // averageHeartRates.push(data.average_heartrate);
     maxHeartRates.push(data.max_heartrate);
 
     averageSpeeds.push(data.average_speed);
@@ -56,7 +64,8 @@ stravaData.forEach(function (data) {
       time: convertTimeString(data.moving_time),
       date: moment(data.start_date).format('Do MMM YY'),
       cadence: data.average_cadence,
-      heartrate: data.average_heartrate
+      heartrate: data.average_heartrate,
+      pace: getPace(convertTimeString(data.moving_time),(data.distance *0.001).toFixed(2))
     });
 
   }
@@ -64,7 +73,7 @@ stravaData.forEach(function (data) {
 //Reorder the arrays
 runDates = runDates.reverse();
 
-averageHeartRates = averageHeartRates.reverse();
+// averageHeartRates = averageHeartRates.reverse();
 maxHeartRates = maxHeartRates.reverse();
 
 averageSpeeds = averageSpeeds.reverse();
@@ -136,11 +145,37 @@ var exerciseCTX = document.getElementById("exercise_chart").getContext('2d');
 var exercisePieChart = new Chart(exerciseCTX).Doughnut(getData(exerciseTypes));
 legend(document.getElementById('exercise_chart_placeholder'), getData(exerciseTypes));
 
-populateTable();
+constructTable();
+// populateTable();
 
-function populateTable(){
-    var table = document.getElementById('running_table');
-    runData.splice(0,4).forEach(function (data) {
+function constructTable() {
+  var tables = document.getElementsByClassName("running-table");
+  var tableData = runData;
+  console.log(tables);
+  // tables.forEach(function (table) {
+  for (var i = 0; i < tables.length; i++) {
+    var row = document.createElement('tr');
+    var cell1 = document.createElement('th');
+    var cell2 = document.createElement('th');
+    var cell3 = document.createElement('th');
+    var cell4 = document.createElement('th');
+    var cell5 = document.createElement('th');
+    cell1.innerHTML = "Dist (Km)";
+    cell2.innerHTML = "Time";
+    cell3.innerHTML = "Date";
+    cell4.innerHTML = "Pace";
+    cell5.innerHTML = "Avg HR (BPM)";
+    tables[i].appendChild(row);
+    row.appendChild(cell1);
+    row.appendChild(cell2);
+    row.appendChild(cell3);
+    row.appendChild(cell4);
+    row.appendChild(cell5);
+    populateTable(tables[i],tableData.splice(0,4));
+  }
+}
+function populateTable(table,tableData){
+    runData.slice(0,4).forEach(function (data) {
       var row = table.insertRow(-1);
       var cell1 = row.insertCell(0);
       var cell2 = row.insertCell(1);
@@ -150,7 +185,7 @@ function populateTable(){
       cell1.innerHTML = data.distance;
       cell2.innerHTML = data.time;
       cell3.innerHTML = data.date;
-      cell4.innerHTML = data.cadence;
+      cell4.innerHTML = data.pace;
       cell5.innerHTML = data.heartrate;
     });
 }
@@ -167,3 +202,11 @@ function convertTimeString(input) {
   var time = Math.floor(input/60) + ((input%60)/100);
   return time.toString().replace(".",":")
 }
+
+function getPace(time, distance){
+  //This was a pain in the ass
+  var decimalTime = (Math.floor(moment.duration(time).asHours()/distance)+(((moment.duration(time).asHours()/distance)%1)*60)/60).toFixed(2);
+  return String((Math.floor(decimalTime) + ((decimalTime%1)*60/100)).toFixed(2)).replace(".",":");
+}
+// console.log(getPace());
+// console.log(((((moment.duration(runData[1].time).asHours()/runData[1].distance)%1)*60)/60).toFixed(2));

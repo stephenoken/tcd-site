@@ -1,8 +1,10 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var concat = require('gulp-concat');
-var exec = require('child_process').exec;
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
+const exec = require('child_process').exec;
+const uglify = require('gulp-uglify');
+
 gulp.task("styles",function () {
   return gulp.src("./src/styles/**/*.scss")
     .pipe(sass({outputStyle: 'compressed'}))
@@ -14,6 +16,7 @@ gulp.task("styles",function () {
 
 gulp.task("script",function () {
     return gulp.src("./src/javascript/**/*.js")
+    .pipe(uglify({outSourceMap: true}))
     .pipe(gulp.dest("./public"));
 });
 

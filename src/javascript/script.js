@@ -36,7 +36,16 @@ var exerciseTypes = {
   }
 }
 
-var runData = [];
+const runData = stravaData.filter(function (data) {return data.type == "Run"})
+  .map(function (data) {return {
+    distance:(data.distance *0.001).toFixed(2),
+    time: convertTimeString(data.moving_time),
+    date: moment(data.start_date).format('Do MMM YY'),
+    cadence: data.average_cadence,
+    heartrate: data.average_heartrate,
+    pace: getPace(convertTimeString(data.moving_time),(data.distance *0.001).toFixed(2))
+  }
+});
 const averageHeartRates = stravaData.filter(function (data) {
   return data.average_heartrate  != undefined
 }).map(function (data) {
@@ -57,18 +66,6 @@ stravaData.forEach(function (data) {
 
   }
   exerciseTypes[data.type].value = exerciseTypes[data.type].value + 1;
-
-  if (data.type == "Run") {
-    runData.push({
-      distance:(data.distance *0.001).toFixed(2),
-      time: convertTimeString(data.moving_time),
-      date: moment(data.start_date).format('Do MMM YY'),
-      cadence: data.average_cadence,
-      heartrate: data.average_heartrate,
-      pace: getPace(convertTimeString(data.moving_time),(data.distance *0.001).toFixed(2))
-    });
-
-  }
 });
 //Reorder the arrays
 runDates = runDates.reverse();
